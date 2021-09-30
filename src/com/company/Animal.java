@@ -40,6 +40,4 @@ public class Animal {
         } else
             System.out.print("Your pet died.\n");
     }
-
-
 }

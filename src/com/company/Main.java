@@ -18,7 +18,5 @@ public class Main {
 
 
         System.out.println("Pet name is: " + me.pet.name);
-
-
     }
 }

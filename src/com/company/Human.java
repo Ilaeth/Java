@@ -12,8 +12,5 @@ public class Human {
         this.lastName = lastName;
         this.phone = phone;
         this.pet = pet;
-
     }
-
-
 }

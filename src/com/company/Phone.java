@@ -13,6 +13,4 @@ public class Phone {
         this.screenSize = screenSize;
         this.operationSystem = operationSystem;
     }
-
-
 }
