@@ -10,7 +10,7 @@ public class Main {
 
         Human me = new Human("Przemek", "Podlecki", "123456789", dog);
 
-        me.car = new Car("X3", "BMW", "Black");
+        Car bmw = new Car("X3", "BMW", "Black", 24000.0);
 
         dog.feed();
         dog.takeForAWalk();
@@ -19,10 +19,13 @@ public class Main {
         cat.takeForAWalk();
 
         System.out.println("Pet name is: " + me.pet.name);
-        System.out.println("My car is " + me.car.producer + " " + me.car.model);
 
         me.getSalary();
         me.setSalary(3250);
         me.getSalary();
+
+        System.out.println(me.getCar());
+        me.setCar(bmw);
+        System.out.println(me.getCar());
     }
 }
