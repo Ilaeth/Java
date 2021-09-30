@@ -12,6 +12,7 @@ public class Main {
         Phone phone1 = new Phone("Samsung", "S10", 2020, 6.1, "android");
 
         Human me = new Human("Przemek", "Podlecki", "123456789", dog);
+        Human brother = new Human( "Paweł", "Podlecki");
 
         Car car1 = new Car("X3", "BMW", 2012, "Black", 24000.0);
         Car car2 = new Car("X3", "BMW", 2011, "Black", 24000.0);
@@ -36,5 +37,12 @@ public class Main {
         System.out.println(phone1);
         phone1.turnOn();
         car1.turnOn();
+
+        me.cash = 1175.0;
+        brother.cash = 150.0;
+        me.pet.sell(me, brother, 100.0);
+        me.car.sell(me, brother, 24000.0);
+        brother.phone = phone1;
+        brother.phone.sell(brother, me, 1000.0);
     }
 }

@@ -1,21 +1,29 @@
 package com.company;
 
 import com.company.devices.Car;
+import com.company.devices.Phone;
 import java.time.LocalTime;
 
 public class Human {
     public String firstName;
     public String lastName;
-    protected String phone;
+    public String phonenumber;
     public Animal pet;
-    private Car car;
+    public Car car;
+    public Phone phone;
     private Double salary;
+    public Double cash;
 
-    public Human(String firstName, String lastName, String phone, Animal pet){
+    public Human(String firstName, String lastName, String phonenumber, Animal pet){
         this.firstName = firstName;
         this.lastName = lastName;
-        this.phone = phone;
+        this.phonenumber = phonenumber;
         this.pet = pet;
+    }
+
+    public Human(String firstName, String lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public Double getSalary() {
@@ -57,7 +65,7 @@ public class Human {
                 ", lastName='" + lastName + '\'' +
                 ", pet=" + pet +
                 ", car=" + car +
-                ", phone='" + phone + '\'' +
+                ", phone='" + phonenumber + '\'' +
                 ", salary=" + salary +
                 '}';
     }
