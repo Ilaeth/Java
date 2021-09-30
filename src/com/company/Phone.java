@@ -6,7 +6,6 @@ public class Phone {
     final public Double screenSize;
     final public String operationSystem;
 
-
     public Phone(String producer, String model, Double screenSize, String operationSystem) {
         this.producer = producer;
         this.model = model;
