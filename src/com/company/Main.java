@@ -20,5 +20,9 @@ public class Main {
 
         System.out.println("Pet name is: " + me.pet.name);
         System.out.println("My car is " + me.car.producer + " " + me.car.model);
+
+        me.getSalary();
+        me.setSalary(3250);
+        me.getSalary();
     }
 }
