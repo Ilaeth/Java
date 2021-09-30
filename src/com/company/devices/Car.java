@@ -29,6 +29,6 @@ public class Car extends Device implements com.company.Salleable {
 
     @Override
     public void turnOn() {
-
+        System.out.println("Naciskam Start");
     }
 }

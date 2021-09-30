@@ -1,13 +1,14 @@
 package com.company;
 
+import com.company.creatures.Pet;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
 public class Main {
 
     public static void main(String[] args) {
-        Animal dog = new Animal("dog", 50.0, "Hawana");
-        Animal cat = new Animal("cat", "Jinx");
+        Pet dog = new Pet("dog", 50.0, "Hawana");
+        Pet cat = new Pet("cat", "Jinx");
 
         Phone phone1 = new Phone("Samsung", "S10", 2020, 6.1, "android");
 

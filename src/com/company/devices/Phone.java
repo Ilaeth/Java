@@ -29,6 +29,6 @@ public class Phone extends Device implements com.company.Salleable {
 
     @Override
     public void turnOn() {
-
+        System.out.println("Przesuń ekran palcem, aby odblokować");
     }
 }
