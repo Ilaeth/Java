@@ -3,23 +3,21 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Animal dog = new Animal();
-        dog.species = "dog";
-        dog.name = "Hawana";
-        dog.weight = 50.0;
+        Animal dog = new Animal("dog", "Hawana");
+        Animal cat = new Animal("cat", 2.0, "Jinx");
 
 
-        Phone samsung = new Phone();
-        samsung.screenSize = 6.1;
-        samsung.producer = "Samsung";
-        samsung.model = "S10";
-        samsung.operationSystem = "android";
+        Phone samsung = new Phone("Samsung", "S10", 6.1, "android");
 
 
-        Human me = new Human();
-        me.firstName = "Przemek";
-        me.lastName = "Podlecki";
-        me.phone = "Samsung S10";
+        Human me = new Human("Przemek", "Podlecki", "123456789", dog);
+
+
+        dog.feed();
+        dog.takeForAWalk();
+
+
+        System.out.println("Pet name is: " + me.pet.name);
 
 
     }
