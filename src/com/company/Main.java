@@ -1,7 +1,9 @@
 package com.company;
 
 import com.company.creatures.Pet;
-import com.company.devices.Car;
+import com.company.devices.Diesel;
+import com.company.devices.Electric;
+import com.company.devices.LPG;
 import com.company.devices.Phone;
 
 public class Main {
@@ -15,8 +17,9 @@ public class Main {
         Human me = new Human("Przemek", "Podlecki", "123456789", dog);
         Human brother = new Human( "Paweł", "Podlecki");
 
-        Car car1 = new Car("X3", "BMW", 2012, "Black", 24000.0);
-        Car car2 = new Car("X3", "BMW", 2011, "Black", 24000.0);
+        Diesel car1 = new Diesel("X3", "BMW", 2012, "Black", 24000.0);
+        LPG car2 = new LPG("X3", "BMW", 2011, "Black", 24000.0);
+        Electric car3 = new Electric("3", "Tesla", 2021, "Red", 264990.0);
 
         dog.feed();
         dog.takeForAWalk();
@@ -45,5 +48,9 @@ public class Main {
         me.car.sell(me, brother, 24000.0);
         brother.phone = phone1;
         brother.phone.sell(brother, me, 1000.0);
+
+        car1.refuel();
+        car2.refuel();
+        car3.refuel();
     }
 }

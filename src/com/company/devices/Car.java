@@ -2,7 +2,7 @@ package com.company.devices;
 
 import com.company.Human;
 
-public class Car extends Device implements com.company.Salleable {
+public abstract class Car extends Device implements com.company.Salleable {
     public String color;
     public Double value;
 
@@ -31,4 +31,5 @@ public class Car extends Device implements com.company.Salleable {
     public void turnOn() {
         System.out.println("Naciskam Start");
     }
+    public abstract void refuel();
 }

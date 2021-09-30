@@ -2,9 +2,15 @@ package com.company.devices;
 
 import com.company.Human;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class Phone extends Device implements com.company.Salleable {
     final public Double screenSize;
     final public String operationSystem;
+    private static final String DEFAULT_SERVER_ADDRESS = "appserver.com";
+    private static final String DEFAULT_Version = "latest";
+    private static final String DEFAULT_PROTOCOL = "https";
 
     public Phone(String model, String producer, Integer yearofproduction, Double screenSize, String operationSystem) {
         super(model, producer, yearofproduction);
@@ -30,5 +36,26 @@ public class Phone extends Device implements com.company.Salleable {
     @Override
     public void turnOn() {
         System.out.println("Przesuń ekran palcem, aby odblokować");
+    }
+
+    public void instalAnnApp(String nameAplication) {
+        this.instalAnnApp(nameAplication, DEFAULT_Version);
+    }
+
+    public void instalAnnApp(String nameAplication, String version) {
+        this.instalAnnApp(nameAplication, version, DEFAULT_SERVER_ADDRESS);
+    }
+
+    public void instalAnnApp(String nameAplication, String version, String serverAdres) {
+        try {
+            URL url = new URL(DEFAULT_PROTOCOL, serverAdres, nameAplication + "_" + version);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void installAnnApp(URL url) {
+        System.out.println("pobiera aplikację " + url.getFile() + " z adresu " + url.getHost());
+        System.out.println("instaluje aplikację " + url.getFile());
     }
 }
