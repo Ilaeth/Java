@@ -59,13 +59,13 @@ public class Human {
         return garage[garageNumber];
     }
 
-    public void setCar(Car car) {
+    public void buyCar(Car car) {
         if (getSalary() > car.value) {
             System.out.println("Udało się zakupić samochód.");
-            this.garage[this.garageFirstEmptyPlace()] = car;
+            this.addCar(car);
         } else if (getSalary() > (car.value / 12)) {
             System.out.println("Udało się zakupić samochód, na kredyt.");
-            this.garage[this.garageFirstEmptyPlace()] = car;
+            this.addCar(car);
         } else
             System.out.println("Nie udało się zakupić samochód, zapisz się na studia i znajdź nową robotę albo idź po podwyżkę.");
     }
@@ -108,6 +108,7 @@ public class Human {
 
     public void addCar(Car newCar) {
         garage[garageFirstEmptyPlace()] = newCar;
+        newCar.addOwner(this);
     }
 
     public Integer garageFirstEmptyPlace() {

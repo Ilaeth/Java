@@ -34,7 +34,7 @@ public class Main {
         me.getSalary();
 
         System.out.println(me.getCar(1));
-        me.setCar(car1);
+        me.buyCar(car1);
         System.out.println(me.getCar(1));
 
         System.out.println(car1);
