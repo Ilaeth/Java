@@ -33,9 +33,9 @@ public class Main {
         me.setSalary(3250);
         me.getSalary();
 
-        System.out.println(me.getCar());
+        System.out.println(me.getCar(1));
         me.setCar(car1);
-        System.out.println(me.getCar());
+        System.out.println(me.getCar(1));
 
         System.out.println(car1);
         System.out.println(phone1);
@@ -45,12 +45,17 @@ public class Main {
         me.cash = 1175.0;
         brother.cash = 150.0;
         me.pet.sell(me, brother, 100.0);
-        me.car.sell(me, brother, 24000.0);
         brother.phone = phone1;
         brother.phone.sell(brother, me, 1000.0);
 
         car1.refuel();
         car2.refuel();
         car3.refuel();
+
+        me.garage[1] = car2;
+        me.garage[0] = car3;
+        System.out.println(me.getGarageValue());
+        me.printGarage();
+        me.sortGarage();
     }
 }
