@@ -1,9 +1,10 @@
 package com.company.devices;
 
 import com.company.Human;
-
+import com.company.Application;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashSet;
 
 public class Phone extends Device implements com.company.Salleable {
     final public Double screenSize;
@@ -11,11 +12,14 @@ public class Phone extends Device implements com.company.Salleable {
     private static final String DEFAULT_SERVER_ADDRESS = "appserver.com";
     private static final String DEFAULT_Version = "latest";
     private static final String DEFAULT_PROTOCOL = "https";
+    public HashSet<Application> applications = new HashSet<>();
+    Human owner;
 
     public Phone(String model, String producer, Integer yearofproduction, Double screenSize, String operationSystem) {
         super(model, producer, yearofproduction);
         this.screenSize = screenSize;
         this.operationSystem = operationSystem;
+        this.owner = owner;
     }
 
     @Override
